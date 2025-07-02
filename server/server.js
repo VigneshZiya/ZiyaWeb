@@ -8,12 +8,17 @@ const app = express();
 // Security Middleware
 app.use(helmet());
 
-app.use(cors())
+app.use(cors({
+  origin: ['https://ziyaacademy.co.in', 'https://www.ziyaacademy.co.in'],
+  methods: ['GET', 'POST', 'OPTIONS'],
+  credentials: true
+}));
+
 
 // Rate Limiting
 const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000, 
-  max: 100 
+  windowMs: 15 * 60 * 1000,
+  max: 100
 });
 app.use(limiter);
 
