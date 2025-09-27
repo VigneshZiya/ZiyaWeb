@@ -9,9 +9,7 @@ const transporter = nodemailer.createTransport({
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS,
   },
-  connectionTimeout: 10000, // wait up to 10 seconds to connect
-  socketTimeout: 10000,      // wait up to 10 seconds for data
-  tls: {
+ tls: {
     rejectUnauthorized: false, // helps avoid self-signed cert issues
   },
 });
