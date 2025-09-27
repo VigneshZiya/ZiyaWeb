@@ -126,7 +126,7 @@ function initEnquiryForm() {
           break;
       }
 
-      const response = await axios.post('https://ziyaweb.onrender.com/api/mail/send-enquiry', formData, {
+      const response = await axios.post('https://script.google.com/macros/library/d/1kvHtHRPVJr18Wosnz5qMnzFu_UFzvw-sS69JpJzlKRXw3c2ty15A-mF7/1', formData, {
         headers: {
           'Content-Type': 'application/json'
         }
