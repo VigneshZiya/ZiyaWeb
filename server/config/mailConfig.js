@@ -6,11 +6,11 @@ const transporter = nodemailer.createTransport({
   port: 587,
   secure: false,
   auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
+    user: 'info@ziyaacademy.co.in',
+    pass: 'pwug xhiq iiqb ceat',
   },
  tls: {
-    rejectUnauthorized: false, // helps avoid self-signed cert issues
+    rejectUnauthorized: false, // helps avoid self-signed acert issues
   },
 });
 
