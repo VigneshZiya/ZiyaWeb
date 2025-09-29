@@ -13,8 +13,6 @@ app.use(cors({
   methods: ['POST', 'OPTIONS']
 }));
 
-app.set('trust proxy', 1);
-
 // Rate Limiting
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, 

@@ -1,14 +1,17 @@
 const nodemailer = require('nodemailer');
-const sgTransport = require('nodemailer-sendgrid'); // Add this
 
-// Use SendGrid API instead of Gmail SMTP
-const transporter = nodemailer.createTransport(
-  sgTransport({
-    apiKey: process.env.SENDGRID_API_KEY // Set this in Render Environment Variables
-  })
-);
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  host: 'smtp.gmail.com',
+  port: 465,
+  secure: true,
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
+  },
+});
 
-// Optional: verify connection (works for API transport too)
+// Verify connection configuration
 transporter.verify((error) => {
   if (error) {
     console.error('Mail transporter error:', error);

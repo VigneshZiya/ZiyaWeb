@@ -11,9 +11,5 @@
   "description": "",
   "devDependencies": {
     "sass": "^1.89.2"
-  },
-  "dependencies": {
-    "@sendgrid/mail": "^8.1.6",
-    "nodemailer-sendgrid": "^1.0.3"
   }
 }
